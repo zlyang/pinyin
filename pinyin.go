@@ -44,9 +44,9 @@ func Convert(s string) (string, error) {
         return pyString, errors.New("fail to calc the offset")
       }
 
-      py_byte := pinyinTable[offset*8 : offset*8+8] // 得出拼音的数组
+      pyByte := pinyinTable[offset*8 : offset*8+8] // 得出拼音的数组
 
-      pyString += zfcRegexp.FindString(string(py_byte)) // 转化成字符串
+      pyString += zfcRegexp.FindString(string(pyByte)) // 转化成字符串
     } else { //other
       pyString += str
     }
